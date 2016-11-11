@@ -1,0 +1,16 @@
+language: bash
+branches:
+  only:
+  - master
+  - /^v\.\d+\.\d+\.\d+$/
+env:
+  global:
+  - secure: aaiZ/7InHJE7EfGzDuZnvEIPJENGmySrj2sSgUaifsleKyQZ8nXhO9Boogn4bO4f3xwTSnR2Wf/TlWzQulmzfTcMBnrrGe8h48RCtW5UHkNqkmqG2aYk3qbHNriYCb52YiN4Plxk/k5u6a3LaweVdvoTSqUxbjiIdeon16lyzClOqGzvGzNodbL2n/Bw86mfY5/6y3iv7Xu0Aw8tVx1/bNEMWnkw41pMgU2O7NTVZnanRZpSF99YOld+70ePwsoYOp+l9YESSknSiDZDZ2pYQrzTfqb7JbazuzZlAFSVb/vWvH00b+S4OnyGww+ZKpTPWmLUUiYrsGYjXI0J8uI8D5Q+dqgSIYHoF2n0NrM8fqrqnlxgdqy+YzLQ0mtqaGjVNs57j7aJSPts609MYKwGJCJC0QIc5hJjsHh5xcbg5WOC4l61HCZ2fYsVWuFI6kt8wkFj6PlhSLxx5prGRCCAmDloVpvnDEJ1ifWDIVFEWE7MHacK+jGKWO+dx23Ha1VyhRJyR411ZqpbEMA3FQEFguyqv0jmEOf1LmZvM44rCwR9F3sOfzoMXOzLVZaGFEi49/86dRMHjQ148D7/m3j2ZKR85eCqGfWaoJ0VIAD1XYl5XvvtLmFVwZq/l+K2Wn2OZJFqmREZqXljDRcI6jrntuy/p52Rl4TxCQAxHjKyb1M=
+  - secure: mxx+s7p9iUPuv+83owkaT30ykVQb8QNMqIeKq5ii10LpRW2D6N1uq1M1UhRIW/8nOYys6zN7Do198TQNNBuC2d6CFocuM4vC0XvFeMzDtyHxkdbJTjri5p7b9hZRZhh5eImM1+60es8xAifdF+lxEW/sxm7VEe0B2JSaQR0tJiO0qzMIbBjtC1zx9qVxf4C0mFBjzUDgU6a8U5cR0ZlppVUOA+3sUSBgfhkDEszT8BE+M40k/b3rsWAsU2rhy8LyFNCyGzllgAJomSzFlhbZQEu/g/EcE+exrJdADtxzJV47XvxiUU0cU+1Sd3Y1PAB246Ra5s6XG4wzbZGAA/uzUriLzyNewVCKl/LUftMcpznd+xkOJFMGcNAG/Z/fw69Hdxj+J8pqIbIZf+qXo/ctTuCWiGYtuRwOd9CBT86fpEPVQRaREl9PEpyGhmDBjMdIhB+8NSxBiWBwfNxqYs0DcldV8Bcj1geLSs3AG//REbsZUL/A7aqiDxqQTNIldhwnRNmk6z/tTxrH6Nls5oLao20xubZQn7weg2PFSSzka83evUzkjGsO90qF/61KMF07dPVZdidS8HcKi8LI20XiEzVCnVPaNQFhddJb8qG4ddl/q9SqM6LxU8/O80wTOKgE7ITQGhgsBfvWqMj9bF15mXp7HEAkS9S95mmPkii7yY4=
+script: ./script.sh
+deploy:
+  provider: script
+  script: ./push.sh
+  on:
+    tags: true
+  skip_cleanup: true
