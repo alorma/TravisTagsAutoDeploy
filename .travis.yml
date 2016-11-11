@@ -15,4 +15,6 @@ deploy:
     secure: QUYiwvDRDd5dFAbIPucP3v1KNusCzdTK9OKxWbq7u7qOE7CQXAH8VRnl4Ve433Y3vUj5miLiobAcSew94//8GHVfbjxrj9hUJRN/cPJ96KB6B0sSLXe/GWeA0roEZ3ZzMjs4stVxnhbEShpBEIyEwU94UpYLF94aTXsmswM6I/AQmRZHKWaWpWzz543pym+JcqC+pUTd72jE9c+aar0ROW2SMHTtZCfiDY2Y/bcKol35/UO9mDq3fL4VuB2W+t5FsC8bn2v8Pq4ICGbhPxQih50VpmQwLyGKRTZ0W/sjISpeqNeWddSH1TGB9klmGV9IcSZuiPZimXWp/spTxLWUbTCJNGNyoBfzK9ncO3cADfkYIvrdv350MrGpLm0VjDk8i/GAhwvWi6wMC/pk/t2gLcA1UV41cG8nLBe9vSXgDkJVPTaQzgLhUB9/nYiiU30oydpwnh5JjftwH697odus2MX8G5EGmRWry7KfdkNCMTZVEDk8VwNIu0C8aWJC3gwM/iDRz+aBhH4TT5sMm1oUwT0M0rMbjhPjcpTp1yAff4ny33k+PrY/Tc2EAx33ZonGLYeJCHtA6Dtn80RN6JBZBYXaxZv4di8QmJ/+cgNQGzPYhGroGwP7xpoAryrzONlGnNJJ/ziTERHJUvNGFzRlJqvOghuMJDD4pfhXWn/0kDo=
   file: version.properties
   on:
+    tags: true 
+    all_branches: true
     repo: alorma/TravisTagsAutoDeploy
